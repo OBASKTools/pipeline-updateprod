@@ -3,8 +3,8 @@
 set -e
 
 echo "process started"
-echo "Start: vfb-pipeline-update-prod"
-echo "VFBTIME:"
+echo "Start: pipeline-updateprod"
+echo "OBASK_TIME:"
 date
 
 ## get remote configs
@@ -62,7 +62,7 @@ curl -i -X POST ${server}/db/neo4j/tx/commit -u ${user}:${password} -H 'Content-
 #cat ${CYPHER} | cypher-shell -u ${user} -p ${password} -a ${server} --format plain
 
 
-echo "End: vfb-pipeline-update-prod"
-echo "VFBTIME:"
+echo "End: pipeline-updateprod"
+echo "OBASK_TIME:"
 date
 echo "process complete"
